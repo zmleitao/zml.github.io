@@ -1,12 +1,17 @@
 header
   height: 450px
-  background: #ccc
-
+  background: url(../img/wall_lowres.JPG) center center
+  background-size: cover
+  
   .logo
+    float: left
     +size(50px)
     background: #999
-
+    margin: 10px 0 0 30px
+    
   nav
+    float: right
+    margin: 30px 30px 0 0 
     a
       display: inline-block
       margin-left: 20px
@@ -21,22 +26,33 @@ header
 
   h1
     text-align: center
+
     font:
       size: 72px
       weight: 700
+    
     color: white
     text-transform: uppercase
     letter-spacing: 0.05em
     margin-bottom: 20px
+    clear: both
+    padding-top: 100px
+    text-shadow: 0px 3px 3px rgba(12,122,220,0.8)
     
     span
       display: inline-block
+      //background: white//rgba(190,190,190,0.4)
       padding: 0.02em 0.05em
-      border: white solid 10px
-  
+      border: white solid 5px
+      //background: #777
   .kicker
     text-align: center
     font:
       weight: 700
     text-transform: uppercase
     letter-spacing: 0.05em
+    background: rgba(190,190,190,0.14)
+    color: rgba(52,52,52,1)
+    text-shadow: 0px 1px 1px rgba(222,222,220,1)
+
+//background: -moz-linear-gradient(  /* for firefox */ left center, rgb(76,149,175) 5%,rgb(183,185,52) 95%)
