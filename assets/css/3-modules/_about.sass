@@ -1,0 +1,71 @@
+
+h3
+  @extend %small-bold
+  text-align: center
+  
+.face-lockup
+  max-width: 780px
+  +display(flex)
+  margin: 0 auto
+  +align-items(center)
+  +justify-content(space-around)
+  
+  .face-img
+    border-radius: 50%
+    background-size: cover
+    background-position: center
+    background-image: url(/assets/img/face.jpg)
+    +size(200px)
+    +order(2)
+    &:hover
+      background-image: url(../img/face2.jpg)
+
+
+        
+  [class^="icon-"]
+    +size(100px)
+    background: $base-color
+    border-radius: 50%
+    //border: solid 1px $base-color
+    fill: $accent-color 
+
+    //&:hover
+    // border: solid 1px rgba(100,100,100,1)
+    &.icon-ist
+      +order(1)
+      &:hover
+        fill: #0ca1e3
+        background: white
+    &.icon-sg
+      +order(3)
+      #stripe
+        fill-opacity: 0
+      &:hover
+        background: white
+        #stripe
+          fill-opacity: 1
+        #contour
+          fill: #363636
+        
+          
+@media screen and (max-width: 650px)
+  .face-lockup
+    display: block
+    text-align: center
+    
+    div
+      display: inline-block
+
+    .face-img
+      display: block
+      background-position: center center
+      background-repeat: no-repeat
+      margin: 0 auto 30px
+  
+.blurb
+  max-width: 620px
+  padding: 0 15px
+  margin:  50px auto
+  font-size: 24px
+  text-align: center
+  

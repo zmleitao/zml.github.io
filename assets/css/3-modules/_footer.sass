@@ -1,0 +1,31 @@
+footer
+
+  background:  $bg_img center center
+  background-size: cover
+  background-position: bottom right
+
+  .lockup
+    padding: 50px 30px
+    +clearfix
+
+    .content-wrap
+      float: left
+      margin-left: 80px
+      margin-top: 50px
+      .copyright
+        //text-align: right
+        margin: 0
+        font-size: 12px
+        color: white
+        text-shadow: 0px 0px 2px $accent-color
+        
+      .avatar
+        background: gray
+        +size(50px)
+        float: left
+      a
+        @extend %small-bold
+        color: $nav-color
+        margin-right: 20px
+      
+      
