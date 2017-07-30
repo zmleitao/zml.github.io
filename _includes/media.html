@@ -1,10 +1,30 @@
 <section >
 <h3> Media </h3>
-{% for post in (1..24) %}
-<div class="thumb-container">
-  <a href="" class="thumb-unit">
-    image
-  </a>
-</div>
-{% endfor %}
+<!--
+<div class="slider slick-initialized slick-slider">
+  <div aria-live="polite" class="slick-list draggable" style="padding: 0px 50px;">
+    <div class="slick-track" style="opacity: 1; width: 110000px; transform: translate3d(-10550px, 0px, 0px);" role="listbox">
+
+
+      <div class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1"><img src="assets/img/wall_lowres.JPG"></div>
+      <div class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1"><img src="assets/img/wall_lowres.JPG"></div>
+      <div class="slick-slide" data-slick-index="0" aria-hidden="true" style="" tabindex="-1" role="option" aria-describedby="slick-slide00"> <img src="assets/img/wall_lowres.JPG"></div>
+
+        </div>
+      -->
+<div class="slide-strip">
+
+<!--    {% for post in (1..8) %}
+    <div>
+      <img src="assets/img/wall_lowres.JPG" width="100%">
+    </div>
+    {% endfor %}-->
+
+    {% for image in site.static_files %}
+        {% if image.path contains 'media' %}
+            <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.path }}" />
+        {% endif %}
+    {% endfor %}
+  </div>
+
 </section>
