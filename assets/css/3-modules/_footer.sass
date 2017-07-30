@@ -1,8 +1,13 @@
 footer
-
-  background:  $bg_img center center
-  background-size: cover
-  background-position: bottom right
+  @extend %background-image
+  background-image:   url(../img/wall_lowres.JPG)
+  background-position: bottom
+  //$bg_img
+  //background-size: cover
+  //background-position: bottom right
+  //position: absolute
+  //bottom: 0
+  //width: 100%
   .lockup
     padding: 50px 30px
     +clearfix
@@ -17,8 +22,8 @@ footer
         font-size: 12px
         color: white
         text-shadow: 0px 0px 2px $accent-color
-        
-      .avatar
+
+      //.avatar
         background: gray
         +size(50px)
         float: left
@@ -26,5 +31,3 @@ footer
         @extend %small-bold
         color: $nav-color
         margin-right: 20px
-      
-      
